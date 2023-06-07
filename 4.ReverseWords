@@ -1,0 +1,15 @@
+#question 4
+def reverseWords(s):
+    words = s.split()  # Split the sentence into individual words
+    reversed_words = [word[::-1] for word in words]  # Reverse each word
+
+    return ' '.join(reversed_words)  # Join the reversed words back into a sentence
+
+
+# Example usage
+s = "Let's take LeetCode contest"
+reversed_sentence = reverseWords(s)
+print(reversed_sentence)
+
+#TC - O(n)
+#SC - O(n)
