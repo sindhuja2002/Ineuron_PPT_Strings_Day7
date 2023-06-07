@@ -1,0 +1,25 @@
+#question 5
+def reverseStr(s, k):
+    result = ""
+    i = 0
+    while i < len(s):
+        # Reverse the first k characters
+        reversed_part = s[i:i+k][::-1]
+
+        # Leave the remaining characters as original
+        remaining_part = s[i+k:i+2*k]
+
+        result += reversed_part + remaining_part
+        i += 2*k
+
+    return result
+
+
+# Example usage
+s = "abcdefg"
+k = 2
+reversed_string = reverseStr(s, k)
+print(reversed_string)
+
+#TC - O(n)
+#SC - O(n)
